@@ -61,9 +61,11 @@ public class Bot extends TelegramLongPollingBot {
 
         }else if (update.getCallbackQuery().getData().equals("Button JKH")) {
             execute(sendMessage(update.getCallbackQuery().getMessage().getChatId(), BotJKHMenu.sendJKHMenu(), "Вы нажали на ЖКХ"));
+        }else if (update.getCallbackQuery().getData().equals("add advert")) {
+            execute(sendMessage(update.getCallbackQuery().getMessage().getChatId(), null, "Введите ваше имя для, чтобы зарегистрировать Вас"));
         }
 
-    }
+        }
 
 //    Главное меню
     public static InlineKeyboardMarkup sendInlineKeyBoardMessageMainMenu() {
